@@ -27,16 +27,23 @@ public class BoardServiceTests {
 //		assertNotNull(service);
 //	}
 	
+//	@Test
+//	public void testRegister() {
+//		BoardVO board = new BoardVO();
+//		
+//		board.setTitle("새로 작성하는 글");
+//		board.setContent("새로 작성하는 내용");
+//		board.setWriter("newbie");
+//		
+//		service.register(board);
+//		
+//		log.info("생성된 게시물의 번호 : " + board.getBno());
+//	}
+	
 	@Test
-	public void testRegister() {
-		BoardVO board = new BoardVO();
+	public void testRead() {
+		BoardVO board = service.get(1L);
 		
-		board.setTitle("새로 작성하는 글");
-		board.setContent("새로 작성하는 내용");
-		board.setWriter("newbie");
-		
-		service.register(board);
-		
-		log.info("생성된 게시물의 번호 : " + board.getBno());
+		log.info(board.getBno() + "번 게시물 : " + board);
 	}
 }
