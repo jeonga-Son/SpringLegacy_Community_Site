@@ -47,17 +47,23 @@ public class BoardServiceTests {
 //		log.info(board.getBno() + "번 게시물 : " + board);
 //	}
 	
+//	@Test
+//	public void testModify() {
+//		BoardVO board = service.get(1L);
+//		
+//		if(board == null) {
+//			return;
+//		}
+//		
+//		board.setTitle("제목만 수정합니다.");
+//		
+//		log.info("MODIFY RESULT : " + service.modify(board));
+//	}
+	
 	@Test
-	public void testModify() {
-		BoardVO board = service.get(1L);
-		
-		if(board == null) {
-			return;
-		}
-		
-		board.setTitle("제목만 수정합니다.");
-		
-		log.info("MODIFY RESULT : " + service.modify(board));
+	public void testRemove() {
+		// 게시물 번호의 존재 여부를 확인하고 테스트 할 것 
+		log.info("REMOVE RESULT :  + " + service.remove(2L));
 	}
 
 }
