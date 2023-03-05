@@ -10614,3 +10614,9 @@ java.lang.ArithmeticException: / by zero
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-03-06 03:06:08.500
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-03-06 03:09:16.669
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-03-06 03:09:16.670
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
