@@ -60,10 +60,15 @@ public class BoardServiceTests {
 //		log.info("MODIFY RESULT : " + service.modify(board));
 //	}
 	
+//	@Test
+//	public void testRemove() {
+//		// 게시물 번호의 존재 여부를 확인하고 테스트 할 것 
+//		log.info("REMOVE RESULT :  + " + service.remove(2L));
+//	}
+	
 	@Test
-	public void testRemove() {
-		// 게시물 번호의 존재 여부를 확인하고 테스트 할 것 
-		log.info("REMOVE RESULT :  + " + service.remove(2L));
+	public void testGetList() {
+		service.getList().forEach(board -> log.info(board));;
 	}
 
 }
