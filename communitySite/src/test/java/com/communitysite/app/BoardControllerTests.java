@@ -30,17 +30,30 @@ public class BoardControllerTests {
 	
 	private MockMvc mockMvc; // 톰캣 같은 서버
 	
-	@Before // 모든ㄷ 테스트 전에 매번 실행되는 메서드가 된다.
+	@Before // 모든 테스트 전에 매번 실행되는 메서드가 된다.
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
 	
+//	@Test
+//	public void testList() throws Exception {
+//		// MockMvcRequestBuilders를 이용해 GET 방식의 호출을 한다.
+//		mockMvc.perform(MockMvcRequestBuilders.get("/board/list"))
+//		.andReturn()
+//		.getModelAndView()
+//		.getModelMap();
+//	}
+	
 	@Test
-	public void testList() throws Exception {
-		// MockMvcRequestBuilders를 이용해 GET 방식의 호출을 한다.
-		mockMvc.perform(MockMvcRequestBuilders.get("/board/list"))
-		.andReturn()
-		.getModelAndView()
-		.getModelMap();
+	public void testRegister() throws Exception {
+		// MockMvcRequestBuilders를 이용해 POST 방식의 호출을 한다.
+		// param을 이용해 전달해야 하는 파라미터들을 지정한다.
+		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/register")
+				.param("title", "테스트 새글 제목")
+				.param("content", "테스트 새글 내용")
+				.param("writer", "user00")
+				).andReturn().getModelAndView().getViewName(); //getViewName : 최종적인 view의 이름?
+		
+		log.info(resultPage);
 	}
 }
